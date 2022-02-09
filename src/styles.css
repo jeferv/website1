@@ -1,0 +1,217 @@
+/*font-family: 'Poppins', sans-serif;*/
+/*
+    Author: Vargas
+    Date : 08-02-2022 
+*/
+:root{
+--font-size: 'Poppins', sans-serif;
+}
+
+/* Base styles*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+ul,ol{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family:var(--font-size);
+    margin: 0;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+h1{
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+h2{
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+
+h3{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h4{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+/*Header*/
+header{
+    background: url('assets/lavanda.jpg') no-repeat;
+    background-size: cover;
+    height: 480px;
+    padding: 0 35px;
+}
+
+.header__content{
+    color: white;
+    margin: 50px auto;
+    max-width: 300px;    
+    text-align: center;    
+}
+
+.header__content button{
+    margin-top: 30px;
+}
+
+/*Nav*/
+nav{
+    align-items: center;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+nav a{
+    color: white;
+}
+
+nav ul{
+    align-items: center;
+    display: flex;
+}
+
+nav ul li{
+    margin-right: 15px;
+}
+
+nav ul li:last-child{
+    margin-right: 0;
+}
+
+/*Global styles*/
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*Info component*/
+.info{
+    margin: 100px auto;
+    max-width: 65%;
+    text-align: center;
+}
+
+.info p{
+    margin-top: 40px;
+    max-width: 98%;
+}
+
+.btn{
+    background-color: #807d7d;
+    border: none;
+    border-radius: .4rem;
+    color: white;
+    cursor: pointer;
+    font-family: var(--font-size);
+    font-size: 1rem;
+    padding: 20px 30px;
+    transition: all 300ms linear;
+}
+
+.btn:hover{
+    background-color: #a8a6a1;    
+}
+
+.btn--small{
+    color: rgb(78, 77, 77);
+    border: none;
+    border-radius: .4rem;
+    padding: 10px 30px;
+    
+}
+
+/*Mid component*/
+.mid{
+    display: flex;
+    margin: 100px 0;
+}
+
+img{
+    height: 430px;
+    width: 50%;
+}
+
+.mid__info{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 75px;
+    text-align: center;
+}
+
+.mid__info p{
+    margin: 30px 0;
+}
+
+.mid.inverted{
+    flex-direction: row-reverse;
+}
+
+.suscription{
+    background-color: #f7f7f7;    
+    padding: 50px 0;
+    text-align: center;
+}
+
+.suscription p{
+    margin: 30px auto;
+    max-width: 50%;
+    text-align: center;
+}
+
+.suscription input{
+    border: 1px solid #e0e0e0;
+    font-family: var(--font-size);
+    font-size: 1rem;
+    padding: 20px 30px;
+    margin-right: 10px;
+}
+
+footer{
+    background-color: #38383b;
+    color: white;
+    padding: 20px 0 30px 0;
+    text-align: center;
+}
+
+footer p:first-child{
+    margin-bottom: 25px;
+}
+
+footer a{
+    color: #a8a6a1;
+    text-decoration: underline;
+}
+
+.pipe{
+  margin: 0 30px;  
+}
+/*cfcecb*/
