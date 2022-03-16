@@ -4,70 +4,91 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyWebSite</title>
-    <link rel="stylesheet" href="src/styles.css">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">     
+    
 </head>
-<body>
-    <header>
-        <nav>
-            <h3>Tinta Color's </h3>
-            <ul>
-                <li><a href="#">Quienes somos</a></li>
-                <li><a href="#">Novedades</a></li>
-                <li><a href="#">Leeme</a></li>
-                <li><button class="btn--small">Servicios</button></li>
-            </ul>
-        </nav>
-        <div class="header__content">
-            <h4>Colores?</h4>
-            <h1>Preguntanos</h1>
-            <button class="btn">Ver mas</button>
+<body style="background-color: rgb(245, 241, 241);">
+    <div class="container" style="margin: 60px;">
+        <H1 style="text-align: center; font-family: 'Roboto', sans-serif; font-weight: bolder; font-size: 500%;">Flovarmorin</H1>
+    </div>
+    <div class="container" style="margin: 40px auto;">
+        <h3 style="font-family: 'Roboto', sans-serif; text-align: center;">La suma de los dígitos del cuadrado de un múltiplo de ocho restado por alguno de los tres primeros números primos dará como resultado un número <b>primo</b>, en caso contrario se restará 4 o 6 al resultado del cuadrado.</h3>        
+            <input type="number" id="inp" class="form-control" min="8" max="200" aria-label="required" style="margin: 30px auto;">
+            <div  class="form-text">Ingrese un numero multiplo de 8
+            </div>        
         </div>
-    </header>
-    <main>
-        <div class="container">
-            <section class="info">
-                <h3>Nuestros procesos son realizados con los mejores productos y de la mas alta calidad</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus iste eius obcaecati, assumenda commodi delectus fugit accusamus veritatis voluptate mollitia magni. Iure temporibus eaque itaque laudantium qui optio nulla iusto.</p>
-            </section>
-            <div class="mid">
-                <img src="src/assets/Arley.jpeg" alt="Arley">
-                <div class="mid__info">
-                    <h3>Nuestra Empresa</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos unde tempora eligendi quia maxime deserunt. Quis deleniti perspiciatis iusto ab quia, sed saepe consectetur, at, pariatur dolor alias libero neque!</p>
-                    <button class="btn">Ver mas</button>
-                </div>
-            </div>
-            <div class="mid inverted">
-                <img src="src/assets/tarros.jpg" alt="image">
-                <div class="mid__info">
-                    <h3>Pasa a la acción</h3>
-                    <p>Somos distribuidores de insumos de las mejores marcas del mercado</p>
-                    <button class="btn">Descubre como</button>
-                </div>
-            </div>
-        </div>
-        <section class="suscription">
-            <h3>Suscribirme</h3>
-            <p>Registrate con tu dirección de correo electronico para recibir noticias y actualizaciones</p>
-            <div class="suscription_form">
-                <input class="input" type="email" placeholder="Correo electronico">
-                <button class="btn">Registrarse</button>
-            </div>
-        </section>
-        <footer>
-            <p><span> Quirigua Bogota Colombia</span>        
-                <span class="pipe">|</span>
-                <span>(551) 555-5555</span>
-                <span class="pipe">|</span>
-                <span>arleyavendano@gmail.com</span>
-            </p>
-            <p>hecho con <a href="#">Vargas</a></p>
-        </footer>
-    </main>    
-    <script src="src/index.js" ></script>
+    </div>
+    <div class="container">
+        <div class="alert alert-primary alert-dismissible fade show" role="alert" id="alert">
+            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>                    
+    </div>
 </body>
+<script>
+
+    document.getElementById("alert").style.display = "none";
+    
+     // guardamos el input en el que el usuario escribe
+     const input = document.querySelector('input');
+
+    //ejecutamos el evento que escucha cuando se escribe
+    input.addEventListener('input', e => {
+    //guardamos el valor actual del input
+    const value = parseInt(e.currentTarget.value);
+
+    //si el valor no es multiplo de 8 mostramos la alerta
+    if (value % 8 === 0) {        
+        res = 0;
+        num = value * value -5;
+        num = num + ''
+        num.split('').forEach(num => res += parseInt(num));        
+        alert(res);
+        if(primo(res)){
+            document.getElementById("alert").style.display ="inline";
+            document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
+        }else if (res % 10 == 5 ){            
+            res += 2;
+            document.getElementById("alert").style.display ="inline";
+            document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
+        }else if (res % 10 == 6 ){            
+            res += 5;
+            document.getElementById("alert").style.display ="inline";
+            document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
+        }else{
+            res = res +1;
+            if(primo(res)){
+                document.getElementById("alert").style.display ="inline";
+                document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
+            }else{
+                
+                res = res - 2;
+                alert("ultima "+res);
+                document.getElementById("alert").style.display ="inline";
+                document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
+            }
+        }
+        document.getElementById("alert").style.display ="inline";
+    }else{
+        alert("El numero ingresado no es multiplo de 8")
+    }
+    });
+
+    function primo(numero) {
+
+    for (var i = 2; i < numero; i++) {
+
+        if (numero % i === 0) {
+        return false;
+        }
+    }
+    return numero !== 1;
+    }
+</script>
 </html>
