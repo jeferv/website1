@@ -49,7 +49,7 @@
         num = value * value -5;
         num = num + ''
         num.split('').forEach(num => res += parseInt(num));        
-        alert(res);
+        //alert(res);
         if(primo(res)){
             document.getElementById("alert").style.display ="inline";
             document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
@@ -69,7 +69,7 @@
             }else{
                 
                 res = res - 2;
-                alert("ultima "+res);
+                //alert("ultima "+res);
                 document.getElementById("alert").style.display ="inline";
                 document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
             }
