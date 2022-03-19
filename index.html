@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,6 +31,49 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>                    
     </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+    
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+            <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    
+        </div>
+    </div>
+
+    <div id="modalElement" class="modal fade" id="mModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
 </body>
 <script>
 
@@ -39,47 +83,50 @@
      const input = document.querySelector('input');
 
     //ejecutamos el evento que escucha cuando se escribe
-    input.addEventListener('input', e => {
+    input.addEventListener('change', e => {
     //guardamos el valor actual del input
-    const value = parseInt(e.currentTarget.value);
+        const value = parseInt(e.currentTarget.value);
 
-    //si el valor no es multiplo de 8 mostramos la alerta
-    if (value % 8 === 0) {        
-        res = 0;
-        num = value * value -5;
-        num = num + ''
-        num.split('').forEach(num => res += parseInt(num));        
-        //alert(res);
-        if(primo(res)){
-            document.getElementById("alert").style.display ="inline";
-            document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
-        }else if (primo(res -5)){
-            res -= 5;
-            document.getElementById("alert").style.display ="inline";
-            document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
-        }else if (primo(res -3)){            
-            res -= 3;
-            document.getElementById("alert").style.display ="inline";
-            document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
-        }else if(primo(res - 2)) {
-            res -= 2;
-            document.getElementById("alert").style.display ="inline";
-            document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
-        }
-        else if(primo(res - 4)) {
-            res -= 4;
-            document.getElementById("alert").style.display ="inline";
-            document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
-        }
-        else if(primo(res - 6)) {
-            res -= 6;
-            document.getElementById("alert").style.display ="inline";
-            document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
-        }
-        document.getElementById("alert").style.display ="inline";
-    }else{
-        alert("El numero ingresado no es multiplo de 8")
-    }
+        //si el valor no es multiplo de 8 mostramos la alerta
+            if (value % 8 === 0) {        
+                res = 0;
+                num = value * value -5;
+                num = num + ''
+                num.split('').forEach(num => res += parseInt(num));        
+                //alert(res);
+                if(primo(res)){
+                    document.getElementById("alert").style.display ="inline";
+                    document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
+                }else if (primo(res -5)){
+                    res -= 5;
+                    document.getElementById("alert").style.display ="inline";
+                    document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
+                }else if (primo(res -3)){            
+                    res -= 3;
+                    document.getElementById("alert").style.display ="inline";
+                    document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
+                }else if(primo(res - 2)) {
+                    res -= 2;
+                    document.getElementById("alert").style.display ="inline";
+                    document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
+                }
+                else if(primo(res - 4)) {
+                    res -= 4;
+                    document.getElementById("alert").style.display ="inline";
+                    document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
+                }
+                else if(primo(res - 6)) {
+                    res -= 6;
+                    document.getElementById("alert").style.display ="inline";
+                    document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
+                }
+                document.getElementById("alert").style.display ="inline";
+            }else{
+                alert("El numero ingresado no es multiplo de 8");
+                //document.querySelector(".modal").classList.add("show");
+                //document.querySelector(".modal").style.display = "block";
+            }
+
     });
 
     function primo(numero) {
@@ -94,3 +141,5 @@
     }
 </script>
 </html>
+
+  
