@@ -52,25 +52,26 @@
                 num.split('').forEach(num => res += parseInt(num));        
                 //alert(res);
                 if(primo(res -5)){
-                    res -= 5;
+                    num = res - 5;
+                    alert(num);
                     document.getElementById("alert").style.display ="inline";
-                    document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
+                    document.getElementById('alert').innerHTML = "la suma de los digitos es <strong><u>"+res+"</u></strong> menos <strong>5</strong>, el numero obtenido <strong>Es primo!</strong> el numero es <strong>"+num+"<strong>";
                 }else if (primo(res -3)){            
-                    res -= 3;
+                    num = res - 3;
                     document.getElementById("alert").style.display ="inline";
-                    document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
+                    document.getElementById('alert').innerHTML = "la suma de los digitos es <strong><u>"+res+"</u></strong> menos <strong>3</strong>, el numero obtenido <strong>Es primo!</strong> el numero es <strong>"+num+"<strong>";
                 }else if(primo(res - 2)) {
-                    res -= 2;
+                    num = res - 2;
                     document.getElementById("alert").style.display ="inline";
-                    document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
+                    document.getElementById('alert').innerHTML = "la suma de los digitos es <strong><u>"+res+"</u></strong> menos <strong>2</strong>, el numero obtenido <strong>Es primo!</strong> el numero es <strong>"+num+"<strong>";
                 }else if(primo(res - 4)) {
-                    res -= 4;
+                    num = res - 4;
                     document.getElementById("alert").style.display ="inline";
-                    document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
+                    document.getElementById('alert').innerHTML = "la suma de los digitos es <strong><u>"+res+"</u></strong> menos <strong>4</strong>, el numero obtenido <strong>Es primo!</strong> el numero es <strong>"+num+"<strong>";
                 }else if(primo(res - 6)) {
-                    res -= 6;
+                    num = res - 6;
                     document.getElementById("alert").style.display ="inline";
-                    document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
+                    document.getElementById('alert').innerHTML = "la suma de los digitos es <strong><u>"+res+"</u></strong> menos <strong>6</strong>, el numero obtenido <strong>Es primo!</strong> el numero es <strong>"+num+"<strong>";
                 }
                 document.getElementById("alert").style.display ="inline";
             }else{
