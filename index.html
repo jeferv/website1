@@ -52,8 +52,7 @@
                 num.split('').forEach(num => res += parseInt(num));        
                 //alert(res);
                 if(primo(res -5)){
-                    num = res - 5;
-                    alert(num);
+                    num = res - 5;                    
                     document.getElementById("alert").style.display ="inline";
                     document.getElementById('alert').innerHTML = "la suma de los digitos es <strong><u>"+res+"</u></strong> menos <strong>5</strong>, el numero obtenido <strong>Es primo!</strong> el numero es <strong>"+num+"<strong>";
                 }else if (primo(res -3)){            
