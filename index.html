@@ -90,14 +90,11 @@
         //si el valor no es multiplo de 8 mostramos la alerta
             if (value % 8 === 0) {        
                 res = 0;
-                num = value * value -5;
+                num = value * value;
                 num = num + ''
                 num.split('').forEach(num => res += parseInt(num));        
-                //alert(res);
-                if(primo(res)){
-                    document.getElementById("alert").style.display ="inline";
-                    document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
-                }else if (primo(res -5)){
+                alert(res);
+                if(primo(res -5)){
                     res -= 5;
                     document.getElementById("alert").style.display ="inline";
                     document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
@@ -109,13 +106,11 @@
                     res -= 2;
                     document.getElementById("alert").style.display ="inline";
                     document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
-                }
-                else if(primo(res - 4)) {
+                }else if(primo(res - 4)) {
                     res -= 4;
                     document.getElementById("alert").style.display ="inline";
                     document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
-                }
-                else if(primo(res - 6)) {
+                }else if(primo(res - 6)) {
                     res -= 6;
                     document.getElementById("alert").style.display ="inline";
                     document.getElementById('alert').innerHTML = "<strong>Es primo!</strong> el numero obtenido es "+res;
